@@ -21,6 +21,11 @@ echo -e "Old container stopped. \n"
 
 
 
+# Téléchargement des fichiers de MyECLv2
+curl -L https://github.com/aeecleclair/MyECLv2/archive/master.zip
+unzip master.zip
+cd MyECLv2-master
+
 # Copie des nouveaux fichiers dans le colume du container.
 echo "Copying new files..."
 sudo rm -rf /var/lib/docker/volumes/myecl_site/_data/
