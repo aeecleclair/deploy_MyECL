@@ -11,6 +11,17 @@ SITE_MYECL="/srv/web/myecl"
 # Nom du service dans le fichier docker-compose
 SERVICE_MYECL="node_myecl"
 CONTAINER_MYECL="myecl_node"
+# Lien de l'archive github
+LINK_ARCHIVE="https://github.com/aeecleclair/MyECLv2/archive/master.zip"
+
+
+
+# Telechargement des fichiers de MyECLv2
+echo "Downloading MyECLv2..."
+curl -L LINK_ARCHIVE
+unzip master.zip
+cd MyECLv2-master
+echo "MyECLv2 downloaded."
 
 
 
@@ -20,11 +31,6 @@ docker stop $CONTAINER_MYECL
 echo -e "Old container stopped. \n"
 
 
-
-# Téléchargement des fichiers de MyECLv2
-curl -L https://github.com/aeecleclair/MyECLv2/archive/master.zip
-unzip master.zip
-cd MyECLv2-master
 
 # Copie des nouveaux fichiers dans le colume du container.
 echo "Copying new files..."
