@@ -18,7 +18,7 @@ LINK_ARCHIVE="https://github.com/aeecleclair/MyECLv2/archive/master.zip"
 
 # Telechargement des fichiers de MyECLv2
 echo "Downloading MyECLv2..."
-curl -L LINK_ARCHIVE
+curl -L $LINK_ARCHIVE
 unzip master.zip
 cd MyECLv2-master
 echo "MyECLv2 downloaded."
